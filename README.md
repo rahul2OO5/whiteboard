@@ -28,8 +28,13 @@ A lightweight, highly responsive, and feature-rich digital whiteboard. Designed 
 ## How to Use
 
 1. Clone or download this repository.
+```bash
+git clone https://github.com/rahul2OO5/whiteboard.git
+```
 2. Open `index.html` in any modern web browser (Brave, Chrome, Firefox, Safari).
 3. Start drawing!
+
+## [git hub pages link](https://rahul2oo5.github.io/whiteboard/)
 
 ## ⌨️ Keyboard Shortcuts
 
