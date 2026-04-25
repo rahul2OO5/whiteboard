@@ -15,8 +15,10 @@ const eraserCursor = document.getElementById("eraserCursor");
 const zoomInBtn = document.getElementById("zoomIn");
 const zoomResetBtn = document.getElementById("zoomReset");
 const zoomOutBtn = document.getElementById("zoomOut");
-const WORKING_SPACE = 3;
 const panBtn = document.getElementById("hand");
+const isMobile = window.innerWidth <= 768;
+const WORKING_SPACE = isMobile ? 1 : 3;
+const MAX_HISTORY = isMobile ? 5 : 20;
 
 let currentZoom = 1;
 canvas.style.transformOrigin = "top left";
@@ -321,7 +323,7 @@ let redoStack = [];
 function saveState() {
   undoStack.push(ctk.getImageData(0, 0, canvas.width, canvas.height));
   redoStack = [];
-  if (undoStack.length > 20) {
+  if (undoStack.length > MAX_HISTORY) {
     undoStack.shift();
   }
 
