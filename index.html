@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="whiteboard_icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>whiteboard</title>
+  </head>
+  <body>
+    <header id="topNavbar">
+      <div class="nav-brand">Board</div>
+      <div class="nav-divider"></div>
+      <h1 id="boardTitle" contenteditable="true" spellcheck="false">
+        Untitled Board
+      </h1>
+    </header>
+    <main>
+      <div id="eraserCursor"></div>
+      <div class="controls">
+        <input
+          type="color"
+          id="colorpicker"
+          value="#000000"
+          title="choose Color"
+        />
+        <input
+          type="range"
+          id="BrushSize"
+          value="5"
+          min="1"
+          max="50"
+          title="Bruch Size"
+        />
+        <input
+          type="range"
+          id="EraserSize"
+          value="5"
+          min="1"
+          max="100"
+          title="Eraser Size"
+        />
+
+        <button id="penButton"></button>
+        <button id="eraserButton"></button>
+        <button id="clearButton"></button>
+
+        <button id="undoButton"></button>
+        <button id="redoButton"></button>
+
+        <button id="downloadButton"></button>
+        <button id="printButton"></button>
+
+        <button id="textButton"></button>
+
+        <button id="zoomOut"></button>
+        <button id="zoomReset">100%</button>
+        <button id="zoomIn"></button>
+        <button id="hand"></button>
+      </div>
+      <canvas id="whiteboard"> </canvas>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.5/mousetrap.min.js"></script>
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>
