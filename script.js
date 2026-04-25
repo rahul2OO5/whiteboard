@@ -165,8 +165,10 @@ function draw(e) {
   const velocity = 10;
   const velocityStroke = Math.max(0.4, 1 - distance / velocity);
 
-  let pressure = e.pointerType === "mouse" ? 1 : e.pressure;
-
+  let pressure = 1;
+  if (e.pointerType === "pen" && e.pressure > 0) {
+    pressure = e.pressure;
+  }
   const targetWidth = baseSize * pressure * velocityStroke;
   currentLineWidth = currentLineWidth + (targetWidth - currentLineWidth) * 0.2;
 
