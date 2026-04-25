@@ -40,8 +40,8 @@ let currentLineWidth = 5;
 let isHoveringCanvas = false;
 let isPanMode = false;
 let isPanning = false;
-let cameraX = -window.innerWidth;
-let cameraY = -window.innerHeight;
+let cameraX = isMobile ? 0 : -window.innerWidth;
+let cameraY = isMobile ? 0 : -window.innerHeight;
 let panStartX = 0;
 let panStartY = 0;
 
