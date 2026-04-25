@@ -399,8 +399,8 @@ function initializeBoard() {
     const savedCamera = localStorage.getItem("camera_state");
     if (savedCamera) {
       const cam = JSON.parse(savedCamera);
-      cameraX = cam.x;
-      cameraY = cam.y;
+      cameraX = isMobile ? 0 : cam.x;
+      cameraY = isMobile ? 0 : cam.y;
       currentZoom = cam.zoom;
       updateZoom();
     }
